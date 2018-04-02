@@ -1,3 +1,2 @@
-This repository is specifically for Python projects! 
+This repository is specifically for all programming related projects!
 
-Have fun! :)
