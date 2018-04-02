@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title> BMI Index Calculator </title>
+		<style type="text/css">
+			#title{
+				text-align: center;
+			}
+			
+			body{
+				font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", 
+				Helvetica, Arial, sans-serif;
+			}
+			
+			#wrapper{
+				border: 5px;
+				border-style: solid;
+				background-color: #f4dc42;
+			
+			}
+			
+			.ml5{
+				margin-left: 5px;
+			}
+			
+			.pl20{
+				padding-left: 20px;
+			}
+			
+			.pt5{
+				padding-top: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="wrapper" class="ml5">
+			<div id="title">
+				<h3>Body Mass Index Calculator</h3>
+			</div>
+			
+			<div id="intro" class="ml5">
+				<p>
+					Body Mass Index (BMI) is used as indicator of total body fat. In order to calculate your BMI, please
+					input your height and weight
+				</p>
+			</div>
+
+            <form class="tableBMI ml5" id="formBMI">
+                <table>
+                    <tr>
+                        <td>
+                            <label> Height: </label>
+                            <input type="text" name="txtHeight" value="Height">
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            <label> Units: </label>
+                            <input type="radio" name="radBtnInches" value="Units">
+                            <label>inches</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="radBtnCm" value="Units">
+                            <label>centimeters</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> Weight: </label>
+                            <input type="text" name="txtWeight" value="Weight">
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                        <td>
+                            <label> Units: </label>
+                            <input type="radio" name="radBtnPounds" value="Units">
+                            <label>pounds</label>
+                        </td>
+                        <td>
+                            <input type="radio" name="radBtnKg" value="Units">
+                            <label>kilograms</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" name="chkDetailedAnalysis" value="Calculate BMI">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+
+            <div class="container ml5">
+                <form>
+                    
+                </form>
+            </div>
+
+            <!--Javascript Code For Calculating BMI-->
+            <script>
+                var bmiForm = document.getElementById("formBMI");
+                var txtHeight = bmiForm.txtHeight.value
+                var txtWeight = bmiForm.txtWeight.value
+
+
+                alert(txtHeight);
+                alert(txtWeight);
+            </script>
+		</div>
+	</body>
+
+</html>
+
+
+<!--Algorithm
+BMI is BMI = weight (kg) ÷ height2 (m2)
+
+BMI = weight (lb) ÷ height2 (in2) × 70320-->
